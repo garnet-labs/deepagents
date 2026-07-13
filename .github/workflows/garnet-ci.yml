@@ -35,16 +35,6 @@ jobs:
       - name: Install project dependencies
         run: uv sync --all-extras --group test
 
-      - name: Lock filesystem smoke dependency
-        run: uv lock
-        working-directory: .github/garnet-deepagents-smoke
-
-      - name: Upload filesystem smoke lock
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
-        with:
-          name: garnet-deepagents-smoke-lock
-          path: .github/garnet-deepagents-smoke/uv.lock
-
       - name: Install filesystem smoke dependency
         run: uv sync --locked
         working-directory: .github/garnet-deepagents-smoke
