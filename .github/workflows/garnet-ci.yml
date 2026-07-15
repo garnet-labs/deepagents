@@ -6,8 +6,9 @@ on:
     paths:
       - ".github/workflows/garnet-ci.yml"
       - ".github/scripts/garnet_filesystem_smoke.py"
-      - ".github/garnet-deepagents-smoke/**"
       - "libs/deepagents/deepagents/backends/filesystem.py"
+      - "libs/deepagents/pyproject.toml"
+      - "libs/deepagents/uv.lock"
 
 permissions:
   contents: read
@@ -35,15 +36,14 @@ jobs:
       - name: Install project dependencies
         run: uv sync --all-extras --group test
 
-      - name: Install filesystem smoke dependency
-        run: uv sync --locked
-        working-directory: .github/garnet-deepagents-smoke
-
       - name: Garnet Runtime Visibility
         uses: garnet-org/action@3d47f4a9004f7356c980a0e8d420ef5984750e3c # v2
         with:
           api_token: ${{ secrets.GARNET_API_TOKEN }}
           jibril_version: v2.14.0
 
+      - name: Install ripgrep tool
+        run: uv tool install --force ripgrep==14.1.0
+
       - name: Verify filesystem search
-        run: PATH="$GITHUB_WORKSPACE/.github/garnet-deepagents-smoke/.venv/bin:$PATH" uv run python ../../.github/scripts/garnet_filesystem_smoke.py
+        run: PATH="$HOME/.local/bin:$PATH" uv run python ../../.github/scripts/garnet_filesystem_smoke.py
