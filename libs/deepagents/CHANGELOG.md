@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.3](https://github.com/garnet-labs/deepagents/compare/deepagents==0.6.2...deepagents==0.6.3) (2026-05-19)
+
+
+### Bug Fixes
+
+* **sdk:** clarify skill source labels in system prompt ([#3464](https://github.com/garnet-labs/deepagents/issues/3464)) ([fc6a24f](https://github.com/garnet-labs/deepagents/commit/fc6a24f18829cf3f36089945226edfa50d52ab9e))
+* **sdk:** strip HTML comments from memory content before system prompt injection ([#3462](https://github.com/garnet-labs/deepagents/issues/3462)) ([bfbb8bc](https://github.com/garnet-labs/deepagents/commit/bfbb8bc5575ebd1ba9aa29430f6d2f86c24b7d3c))
+
 ## [0.6.2](https://github.com/langchain-ai/deepagents/compare/deepagents==0.6.1...deepagents==0.6.2) (2026-05-18)
 
 ### Features
