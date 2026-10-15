@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.3](https://github.com/garnet-labs/deepagents/compare/langchain-quickjs==0.1.2...langchain-quickjs==0.1.3) (2026-05-19)
+
+
+### Features
+
+* **sdk:** v0.6 ([4db09ac](https://github.com/garnet-labs/deepagents/commit/4db09acba34b38521192b8f278723524be560779))
+
+
+### Bug Fixes
+
+* **quickjs:** update system prompt snapshots ([#3450](https://github.com/garnet-labs/deepagents/issues/3450)) ([9f9220d](https://github.com/garnet-labs/deepagents/commit/9f9220d80737208faa9262c0bdfb3eeafc0e13c8))
+
 ## [0.1.2](https://github.com/langchain-ai/deepagents/compare/langchain-quickjs==0.1.1...langchain-quickjs==0.1.2) (2026-05-11)
 
 
